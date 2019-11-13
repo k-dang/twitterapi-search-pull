@@ -2,6 +2,10 @@
 
 Python 3.6
 
+```#python
+pip install -r requirements.txt
+```
+
 ```#bash
 workon twitterapi3.6
 ```
