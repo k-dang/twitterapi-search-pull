@@ -1,0 +1,224 @@
+{
+    "created_at": "Wed Nov 06 13:10:33 +0000 2019",
+    "id": 1192066742874525697,
+    "id_str": "1192066742874525697",
+    "text": "\ud83c\udfa5 \n\nTesla! sometimes you understand things after viewing them from a different perspective \n\n#art #science #Tesla \nhttps://t.co/bGhsa40mdp",
+    "truncated": false,
+    "entities": {
+        "hashtags": [
+            {
+                "text": "art",
+                "indices": [
+                    93,
+                    97
+                ]
+            },
+            {
+                "text": "science",
+                "indices": [
+                    98,
+                    106
+                ]
+            },
+            {
+                "text": "Tesla",
+                "indices": [
+                    107,
+                    113
+                ]
+            }
+        ],
+        "symbols": [],
+        "user_mentions": [],
+        "urls": [],
+        "media": [
+            {
+                "id": 1191380678937591809,
+                "id_str": "1191380678937591809",
+                "indices": [
+                    115,
+                    138
+                ],
+                "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/1191380678937591809/pu/img/9ncQ2BRRM2NYw8HE.jpg",
+                "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1191380678937591809/pu/img/9ncQ2BRRM2NYw8HE.jpg",
+                "url": "https://t.co/bGhsa40mdp",
+                "display_url": "pic.twitter.com/bGhsa40mdp",
+                "expanded_url": "https://twitter.com/ZonePhysics/status/1191380720159248384/video/1",
+                "type": "photo",
+                "sizes": {
+                    "thumb": {
+                        "w": 150,
+                        "h": 150,
+                        "resize": "crop"
+                    },
+                    "medium": {
+                        "w": 226,
+                        "h": 400,
+                        "resize": "fit"
+                    },
+                    "large": {
+                        "w": 226,
+                        "h": 400,
+                        "resize": "fit"
+                    },
+                    "small": {
+                        "w": 226,
+                        "h": 400,
+                        "resize": "fit"
+                    }
+                },
+                "source_status_id": 1191380720159248384,
+                "source_status_id_str": "1191380720159248384",
+                "source_user_id": 934281246435405824,
+                "source_user_id_str": "934281246435405824"
+            }
+        ]
+    },
+    "extended_entities": {
+        "media": [
+            {
+                "id": 1191380678937591809,
+                "id_str": "1191380678937591809",
+                "indices": [
+                    115,
+                    138
+                ],
+                "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/1191380678937591809/pu/img/9ncQ2BRRM2NYw8HE.jpg",
+                "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1191380678937591809/pu/img/9ncQ2BRRM2NYw8HE.jpg",
+                "url": "https://t.co/bGhsa40mdp",
+                "display_url": "pic.twitter.com/bGhsa40mdp",
+                "expanded_url": "https://twitter.com/ZonePhysics/status/1191380720159248384/video/1",
+                "type": "video",
+                "sizes": {
+                    "thumb": {
+                        "w": 150,
+                        "h": 150,
+                        "resize": "crop"
+                    },
+                    "medium": {
+                        "w": 226,
+                        "h": 400,
+                        "resize": "fit"
+                    },
+                    "large": {
+                        "w": 226,
+                        "h": 400,
+                        "resize": "fit"
+                    },
+                    "small": {
+                        "w": 226,
+                        "h": 400,
+                        "resize": "fit"
+                    }
+                },
+                "source_status_id": 1191380720159248384,
+                "source_status_id_str": "1191380720159248384",
+                "source_user_id": 934281246435405824,
+                "source_user_id_str": "934281246435405824",
+                "video_info": {
+                    "aspect_ratio": [
+                        113,
+                        200
+                    ],
+                    "duration_millis": 26567,
+                    "variants": [
+                        {
+                            "bitrate": 632000,
+                            "content_type": "video/mp4",
+                            "url": "https://video.twimg.com/ext_tw_video/1191380678937591809/pu/vid/226x400/YikBiEzhaylla0Kw.mp4?tag=10"
+                        },
+                        {
+                            "content_type": "application/x-mpegURL",
+                            "url": "https://video.twimg.com/ext_tw_video/1191380678937591809/pu/pl/08YoqiRiG4qxSpRo.m3u8?tag=10"
+                        }
+                    ]
+                },
+                "additional_media_info": {
+                    "monetizable": false
+                }
+            }
+        ]
+    },
+    "metadata": {
+        "result_type": "popular",
+        "iso_language_code": "en"
+    },
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+        "id": 326665662,
+        "id_str": "326665662",
+        "name": "Alexander Verbeek \ud83c\udf0d",
+        "screen_name": "Alex_Verbeek",
+        "location": "Stockholm",
+        "description": "Public Speaker | Moderator | Diplomat | Photographer | Yale World Fellow | Climate Change | Wildlife | Environment | Art | Energy-Water-Food | Sustainability \ud83c\udf31",
+        "url": "https://t.co/CrjUcBW6SD",
+        "entities": {
+            "url": {
+                "urls": [
+                    {
+                        "url": "https://t.co/CrjUcBW6SD",
+                        "expanded_url": "https://youtu.be/brk-RUovBa4",
+                        "display_url": "youtu.be/brk-RUovBa4",
+                        "indices": [
+                            0,
+                            23
+                        ]
+                    }
+                ]
+            },
+            "description": {
+                "urls": []
+            }
+        },
+        "protected": false,
+        "followers_count": 213969,
+        "friends_count": 102600,
+        "listed_count": 3092,
+        "created_at": "Thu Jun 30 08:43:16 +0000 2011",
+        "favourites_count": 80495,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": true,
+        "verified": true,
+        "statuses_count": 14275,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1122045664286924801/w-HaDZwO_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1122045664286924801/w-HaDZwO_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/326665662/1356119193",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null,
+        "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 198,
+    "favorite_count": 471,
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
+}
