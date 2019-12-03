@@ -1,5 +1,11 @@
 .env
 
+*.csv
 
-dataset.csv
-dataset2.csv
+*.pyc
+
+.vscode
+
+data.json
+
+.ipynb_checkpoints
