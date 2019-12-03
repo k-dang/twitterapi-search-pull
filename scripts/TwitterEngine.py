@@ -38,7 +38,7 @@ class TwitterEngine():
             self.__search_and_pull_tweets(term)
         
         for key in self.tweets_dict:
-            file_path = f'./csv/{key}-{self.csv_file_name}'
+            file_path = f'../csv/{key}-{self.csv_file_name}'
             if (self.__file_exists(key)):
                 with open(file_path, 'a') as f:
                     writer = csv.writer(f)
