@@ -9,3 +9,7 @@
 data.json
 
 .ipynb_checkpoints
+
+notebook
+
+creds/

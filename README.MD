@@ -2,10 +2,6 @@
 
 Python 3.6
 
-```#python
-pip install -r requirements.txt
-```
-
 Setup virtualenv with virtualenvwrapper
 
 ```bash
@@ -19,15 +15,29 @@ setup folder for virtualenv through env variables
 export WORKON_HOME=$HOME/.virtualenvs
 ```
 
+create a virtual env
+
+```bash
+mkvirtualenv twitterapi3.6
+```
+
+start up virtual env
+
 ```#bash
 workon twitterapi3.6
 ```
 
-create .env file with twitter api credentials
+```#python
+pip install -r requirements.txt
+```
+
+create .env file with twitter api credentials and fire base admin credential json
+currently need json credentials from fire storage
 
 ```#bash
 consumer_api_key=''
 consumer_api_secret_key=''
+firebase_credentials_path=''
 ```
 
 flask setup
@@ -36,4 +46,10 @@ flask setup
 set FLASK_APP=app
 set FLASK_ENV=development
 flask run
+```
+
+ngrok command
+
+```#bash
+ngrok http 5000
 ```
