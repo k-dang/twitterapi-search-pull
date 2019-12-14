@@ -38,6 +38,7 @@ currently need json credentials from fire storage
 consumer_api_key=''
 consumer_api_secret_key=''
 firebase_credentials_path=''
+firebase_credentials_json=''
 ```
 
 flask setup
