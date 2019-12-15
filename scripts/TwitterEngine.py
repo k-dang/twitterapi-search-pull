@@ -62,44 +62,13 @@ class TwitterEngine():
     # do I need to create a function to pull into one file?
     def __write_to_onefile(self, row):
         file_path = f'{self.csv_file_name}'
-        with open(file_path, 'a') as f:
-            writer = csv.writer(f)
-            writer.writerow(row)
-
-if __name__ == "__main__":
-    cred = credentials.Certificate(os.getenv("firebase_credentials_path"))
-    firebase_admin.initialize_app(cred, {
-        'storageBucket': 'twitter-api-store.appspot.com'
-    })
-    bucket = storage.bucket()
-
-    # download the dataset
-    source_blob_name = "dataset.csv"
-    # hold dataset for updating and push back to firebase storage
-    destination_file_name = "scripts/intermediate/dataset.csv"
-    
-    blob = bucket.blob(source_blob_name)
-    blob.download_to_filename(destination_file_name)
-    print('Blob {} downloaded to {}.'.format(
-        source_blob_name,
-        destination_file_name))
-
-    # call twitter api and save to dataset
-    twitterEngine = TwitterEngine(destination_file_name)
-    terms = ['Tesla', '#Tesla']
-    twitterEngine.batch_pull(terms)
-
-    # upload and replace current dataset
-    source_file_name = destination_file_name
-    destination_blob_name = source_blob_name
-
-    blob = bucket.blob(destination_blob_name)
-    blob.upload_from_filename(source_file_name)
-
-    print('File {} uploaded to {}.'.format(
-        source_file_name,
-        destination_blob_name))
-
-    print('Deleting intermediate files')
-    os.remove(destination_file_name)
+        if (self.__file_exists(file_path)):
+            with open(file_path, 'a') as f:
+                writer = csv.writer(f)
+                writer.writerow(row)
+        else:
+            with open(file_path, 'w+') as f:
+                f.write(self.row_header)
+                writer = csv.writer(f)
+                writer.writerow(row)
 

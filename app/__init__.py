@@ -29,9 +29,11 @@ firebase_admin.initialize_app(cred, {
 # download all datasets from firestore storage for faster local processing
 bucket = storage.bucket()
 blobs = bucket.list_blobs()
+downloaded = {}
 for blob in blobs:
     destination_file_name = f'app/blobs/{blob.name}'
     blob.download_to_filename(destination_file_name)
+    downloaded[blob.name] = datetime.datetime.now()
 
 # source_blob_name = f'{cname}-dataset.csv'
 # blob = bucket.blob(source_blob_name)
@@ -40,9 +42,13 @@ for blob in blobs:
 
 # figure out if dataset re download is needed
 # maybe switch to once per day instead of checking file diff if usage is too high
-# use a dictionary of last pulls ???
-def check_cache():
-    print('haha')
+def check_cache(company):
+    local_dataset_name = f'{company}-dataset.csv'
+
+    if (datetime.datetime.now() - downloaded[local_dataset_name] >= timedelta(hours=24)):
+        blob = bucket.blob(local_dataset_name)
+        destination_file_name = f'app/blobs/{local_dataset_name}'
+        blob.download_to_filename(destination_file_name)
 
 def create_app():
     app = Flask(__name__, instance_relative_config=True)
@@ -80,7 +86,7 @@ def create_app():
     def get_sentiment_range(company_name):
         data = request.json
         dataset_name = f'app/blobs/{company_name}-dataset.csv'
-        # check_cache()
+        check_cache(company_name)
         tesla_twitter_set = DataSetReader(dataset_name)
         tesla_twitter_set.drop_dups_add_sentiment()
 
@@ -100,7 +106,7 @@ def create_app():
     @app.route('/api/<company_name>/sentiment/average', methods=['GET'])
     def get_sentiment_average(company_name):
         dataset_name = f'app/blobs/{company_name}-dataset.csv'
-        # check_cache()
+        check_cache(company_name)
         tesla_twitter_set = DataSetReader(dataset_name)
         tesla_twitter_set.drop_dups_add_sentiment()
 
