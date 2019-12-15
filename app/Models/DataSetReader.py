@@ -21,7 +21,7 @@ class DataSetReader():
         self.df = self.df.sort_values(by=['retweet_count', 'favorite_count', 'id'], ascending=False)
 
     # returns the average sentiment for the df
-    def get_sentiment(self):
+    def get_average_sentiment(self):
         return self.df['sentiment'].mean()
 
     def get_sentiment_range(self, after, before):
