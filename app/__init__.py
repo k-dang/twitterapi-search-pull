@@ -91,8 +91,10 @@ def create_app():
         sentiment_df.index = sentiment_df.index.map(str)
 
         result = sentiment_df.to_dict()
+        formatted_result = [{'date': key, 'sentiment': result[key]} for key in result]
+
         return jsonify({
-            'sentiments': result
+            'sentiments': formatted_result
         })
 
     return app
