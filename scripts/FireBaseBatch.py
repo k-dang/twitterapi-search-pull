@@ -52,7 +52,7 @@ def FireBasePullAndUpdate(query):
     os.remove(destination_file_name)
 
 if __name__ == "__main__":
-    companies = ['Tesla', 'Microsoft']
+    companies = ['Tesla', 'Microsoft', 'Apple', 'Disney']
 
     for company in companies:
         # print(company)
