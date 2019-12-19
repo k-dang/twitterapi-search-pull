@@ -49,6 +49,7 @@ def check_cache(company):
         blob = bucket.blob(local_dataset_name)
         destination_file_name = f'app/blobs/{local_dataset_name}'
         blob.download_to_filename(destination_file_name)
+        downloaded[local_dataset_name] = datetime.datetime.now()
 
 def create_app():
     app = Flask(__name__, instance_relative_config=True)
