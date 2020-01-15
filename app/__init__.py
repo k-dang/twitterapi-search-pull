@@ -91,17 +91,32 @@ def create_app():
         tesla_twitter_set = DataSetReader(dataset_name)
         tesla_twitter_set.drop_dups_add_sentiment()
 
-        filtered_df = tesla_twitter_set.get_filtered_df(data['from'], data['to'] + '23:59:59')
-        result_df = filtered_df.groupby(['created_at_date']).mean()
-        sentiment_df = result_df['sentiment']
-        sentiment_df.index = sentiment_df.index.map(str)
+        result = getSentimentDfDict(tesla_twitter_set, data['from'], data['to'] + '23:59:59')
+        # if no results comeback for the dates
+        if not result:
+            tesla_twitter_set.df.sort_values(by=['created_at_date'], ascending=False)
+            # get newest possible dates
+            newTo = tesla_twitter_set.df['created_at_date'].iloc[0]
+            newFrom = newTo + timedelta(days=-7)
 
-        result = sentiment_df.to_dict()
+            result = getSentimentDfDict(tesla_twitter_set, newFrom.strftime('%Y-%m-%d'), newTo.strftime('%Y-%m-%d') + '23:59:59')
+
+
         formatted_result = [{'date': key, 'sentiment': result[key]} for key in result]
 
         return jsonify({
             'sentiments': formatted_result
         })
+
+    def getSentimentDfDict(dataSetReader, fromDate, toDate):
+        filtered_df = dataSetReader.get_filtered_df(fromDate, toDate)
+        result_df = filtered_df.groupby(['created_at_date']).mean()
+        sentiment_df = result_df['sentiment']
+        sentiment_df.index = sentiment_df.index.map(str)
+
+        result = sentiment_df.to_dict()
+        return result
+
 
     # return average sentiment (all data)
     @app.route('/api/<company_name>/sentiment/average', methods=['GET'])

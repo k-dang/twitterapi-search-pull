@@ -54,3 +54,9 @@ ngrok command
 ```#bash
 ngrok http 5000
 ```
+
+batching scripts
+
+```#bash
+python scripts\FireBaseBatch.py
+```
