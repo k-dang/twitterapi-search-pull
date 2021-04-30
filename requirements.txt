@@ -37,7 +37,7 @@ python-dotenv==0.10.3
 pytz==2019.3
 requests==2.22.0
 requests-oauthlib==1.2.0
-rsa==4.0
+rsa==4.7
 six==1.13.0
 textblob==0.15.3
 tweepy==3.8.0
